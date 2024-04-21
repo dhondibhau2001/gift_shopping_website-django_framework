@@ -29,7 +29,7 @@
           </ul>
        </div>
        <div class="clear"></div>
-       </div>
+      </div>
   <div class="header_slide">
            <div>
             <table style="border:2px solid black; margin: 0 auto;">
@@ -49,13 +49,13 @@
                 <td>{{i.product_name}}</td>
                 <td>{{i.category}}</td>
                 <td>{{i.subcategory}}</td>
-                <td>${{i.price}}</td>
+                <td>RS: {{i.price}}</td>
                 <td><img src="/media/{{i.Image}}" style="max-width: 80px; height: 80px;"></td>
                 <td><a href="{% url 'buynow' i.id %}">Buy Now</a></td>
                 <td><a href="{% url 'deletecartitem' i.id %}">Delete</a></td>
               </tr>
               {% endfor %}
-              <tr><th colspan="7"><h2 style="font-size: 25px;">Total: ${{total}}/-</h2></th></tr>
+              <tr><th colspan="7"><h2 style="font-size: 25px;">Total: RS: {{total}}/-</h2></th></tr>
             </table>
            
            </div>

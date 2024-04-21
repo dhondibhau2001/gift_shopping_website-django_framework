@@ -1,4 +1,4 @@
-{% extends 'base.html ' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -10,7 +10,7 @@
 		float: left;
 	}
 </style>
-</div>
+<div>
 	<div class="header_bottom">
 	     	<div class="menu">
 	     		<ul>
@@ -55,13 +55,13 @@
 	      	{% for i in accents %}
 				<div class="card col-md-3 img-thumbnail" style="width: 18rem;margin-bottom: 30px;height:350px;">
 					<a href="{% url 'viewproduct' i.id %}">
-				  	<img src="/media/{{i.image}}" class="card-img-top img-thumbnail" alt="..." style="max-width:100%;height: 180px;">
-						  <div class="card-body">
-						  	<strong>{{i.name}}</strong>
-						  </a>
+				<img src="/media/{{i.image}}" class="card-img-top img-thumbnail" alt="..." style="max-width:100%;height: 180px;">
+						<div class="card-body">
+						<strong>{{i.name}}</strong>
+						</a>
 						    <p class="card-text">{{i.desc|slice:"0:30"}}...</p>
-						    <p><strong style="background-color: yellow">${{i.price}}</strong> &nbsp;&nbsp; <a href="{% url 'cart' i.id %}"><button class="btn btn-info">Add to cart</button></a></p>
-						  </div>
+						    <p><strong style="background-color: yellow">RS :{{i.price}}</strong> &nbsp;&nbsp; <a href="{% url 'cart' i.id %}"><button class="btn btn-info">Add to cart</button></a></p>
+						</div>
 				</div>
 				{% endfor %}
 			</div>
@@ -71,4 +71,4 @@
 </div>
 </div>
 </div>
-   {% endblock %}
+{% endblock %}

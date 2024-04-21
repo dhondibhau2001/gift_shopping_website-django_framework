@@ -84,6 +84,7 @@ def myaccount(request):
 		last_name=request.user.last_name
 		email=request.user.email
 	return render(request,'myaccount.html',{'username':username,'first_name':first_name,'last_name':last_name,'email':email})
+
 def delivery(request):
 	return render(request,'delivery.html')
 
